@@ -1,0 +1,16 @@
+type Editorial {
+	id: ID!
+	nombre: String!
+	pais : String	
+}
+
+# Root
+type Query {
+	findAllEditorials: [Editorial]!
+	countEditorials: Long!
+}
+
+# Root
+type Mutation {
+	createEditorial(nombre: String!, pais : String): Editorial!
+}
